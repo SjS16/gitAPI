@@ -1,0 +1,23 @@
+{
+  "name": "github-avatar-downloader",
+  "version": "1.0.0",
+  "description": "## Problem Statement",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SjS16/gitAPI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SjS16/gitAPI/issues"
+  },
+  "homepage": "https://github.com/SjS16/gitAPI#readme",
+  "dependencies": {
+    "request": "^2.83.0"
+  }
+}
