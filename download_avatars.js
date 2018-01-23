@@ -22,12 +22,20 @@ getRepoContributors(args[2], args[3], function(err, users) {
    {console.log("Specify both arguments!");
  return;
 }
+  fs.mkdir('./avatars', function(err, fd) {
+      if (err) {
+        return console.error(err);
+      }
+        console.log("Directory opened successfully!");
+  });
    users.forEach(function(user) {
     var url = user.avatar_url;
     var filePath = "avatars/" + user.login + ".jpg";
     console.log(downloadImageByURL(url, filePath));
-    });
+  });
+
 });
+
 
 function downloadImageByURL(url, filePath) {
   request.get(url)               // Note 1
@@ -38,6 +46,7 @@ function downloadImageByURL(url, filePath) {
          console.log('Response Status Code: ', response.statusCode);
        })
        .pipe(fs.createWriteStream(filePath));
+       return;
 }
 
 // downloadImageByURL("https://avatars2.githubusercontent.com/u/2741?v=3&s=466", "avatars/kvirani.jpg");
