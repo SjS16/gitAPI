@@ -39,7 +39,6 @@ getRepoContributors(args[2], args[3], function(err, users) {
     var filePath = "avatars/" + user.login + ".jpg";
     console.log(downloadImageByURL(url, filePath)); //use parsed info from tags in download image function
   });
-
 });
 
 
