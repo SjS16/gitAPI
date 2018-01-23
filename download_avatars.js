@@ -24,7 +24,7 @@ function getRepoContributors(repoOwner, repoName, cb) {
 
 //use args from node to fill in and get repo contributors
 getRepoContributors(args[2], args[3], function(err, users) {
-  if (args.length < 4) //require both args
+  if (args.length !== 4) //require both args
    {console.log("Specify both arguments!");
  return;
 }
